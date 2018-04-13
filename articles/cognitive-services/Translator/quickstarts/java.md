@@ -57,7 +57,7 @@ public class TranslateTextQuickStart {
 
 	public static String Translate () throws Exception {
         String encoded_query = URLEncoder.encode (text, "UTF-8");
-        String params = "?to=" + target + "&text=" + text;
+        String params = "?to=" + target + "&text=" + encoded_query;
 		URL url = new URL (host + path + params);
 
 		HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
